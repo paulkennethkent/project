@@ -9,4 +9,9 @@ class User < ActiveRecord::Base
     )
     user
   end
+
+  def strava
+    @client = Strava::Api::V3::Client.new(:access_token => token)
+  end
+
 end
