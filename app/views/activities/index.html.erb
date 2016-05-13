@@ -9,7 +9,11 @@
       <th colspan="3"></th>
     </tr>
   </thead>
-
+    <ul>
+      <% Activity.list_athlete_activities.each do |activity| %>
+      <li><% activity %></li>
+      <% end %>
+    </ul>
 
 </table>
 

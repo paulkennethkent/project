@@ -1,8 +1,8 @@
 class Activity < ActiveRecord::Base
   belongs_to :user
 
-  def strava.list_athlete_activities
-
+  def self.list_athlete_activities
+      strava.list_athlete_activities
   end
 
 end
