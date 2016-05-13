@@ -10,9 +10,12 @@ class User < ActiveRecord::Base
     user
   end
 
-  def self.strava
-    client = Strava::Api::V3::Client.new(:access_token => token)
+  def self.strava_client
+    @strava_client = Strava::Api::V3::Client.new(:access_token => '7d4f3a726c48d81a141ddf538857a442512ab981')
   end
 
+def self.the_list
+  strava_client.list_athlete_activities
+end
 
 end
