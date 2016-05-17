@@ -4,8 +4,11 @@
 
 <h2>fdsdf</h2>
 
-<ul>
-  <li><% User.the_list.each do |activity| %></li>
-   <li><%= activity %></li>
-  <% end %>
-</ul>
+<div class="">
+  <ol>
+    <li><% User.the_list.each do |activity| %></li>
+     <li><%= activity["id"] %></li>
+    <% end %>
+  </ol>
+
+</div>
